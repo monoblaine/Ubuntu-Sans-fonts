@@ -13,6 +13,7 @@
       <map input="800" output="800"/>
     </axis>
   </axes>
+
   <sources>
     <source filename="UbuntuSans-ThinItalic.ufo" name="Ubuntu Sans Thin Italic" familyname="Ubuntu Sans" stylename="Thin">
       <location>
@@ -20,7 +21,7 @@
         <dimension name="Weight" xvalue="100"/>
       </location>
     </source>
-    
+
     <source filename="UbuntuSans-Italic.ufo" name="Ubuntu Sans Italic" familyname="Ubuntu Sans" stylename="Italic">
       <lib copy="1"/>
       <groups copy="1"/>
@@ -31,18 +32,21 @@
         <dimension name="Weight" xvalue="400"/>
       </location>
     </source>
+
     <source filename="UbuntuSans-ExtraBoldItalic.ufo" name="Ubuntu Sans ExtraBold Italic" familyname="Ubuntu Sans" stylename="ExtraBold Italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="800"/>
       </location>
     </source>
+
     <source filename="UbuntuSans-CondensedItalic.ufo" name="Ubuntu Sans Condensed Italic" familyname="Ubuntu Sans" stylename="Condensed Italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="400"/>
       </location>
     </source>
+
     <source filename="UbuntuSans-CondensedExtraBoldItalic.ufo" familyname="Ubuntu Sans" stylename="Condensed ExtraBold Italic">
       <location>
         <dimension name="Width" xvalue="75"/>
@@ -56,19 +60,17 @@
         <dimension name="Weight" xvalue="100"/>
       </location>
     </source>
-
   </sources>
+
   <instances>
     <!-- normal width -->
-    
-    <instance 
-        name="Ubuntu Sans Thin Italic" 
-        familyname="Ubuntu Sans" 
-        stylename="Thin Italic" 
-        filename="../instance_ufo/UbuntuSans-ThinItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Thin" 
-        stylemapstylename="italic"
-    >
+    <instance
+        name="Ubuntu Sans Thin Italic"
+        familyname="Ubuntu Sans"
+        stylename="Thin Italic"
+        filename="../instance_ufo/UbuntuSans-ThinItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Thin"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="100"/>
@@ -76,15 +78,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    <instance 
-        name="Ubuntu Sans ExtraLight Italic" 
-        familyname="Ubuntu Sans" 
-        stylename="ExtraLight Italic" 
-        filename="../instance_ufo/UbuntuSans-ExtraLightItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans ExtraLight" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans ExtraLight Italic"
+        familyname="Ubuntu Sans"
+        stylename="ExtraLight Italic"
+        filename="../instance_ufo/UbuntuSans-ExtraLightItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans ExtraLight"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="200"/>
@@ -92,15 +93,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    <instance 
-        name="Ubuntu Sans Light Italic" 
-        familyname="Ubuntu Sans" 
-        stylename="Light Italic" 
-        filename="../instance_ufo/UbuntuSans-LightItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Light" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Light Italic"
+        familyname="Ubuntu Sans"
+        stylename="Light Italic"
+        filename="../instance_ufo/UbuntuSans-LightItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Light"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="300"/>
@@ -108,16 +108,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    
-    <instance 
-        name="Ubuntu Sans Italic" 
-        familyname="Ubuntu Sans" 
-        stylename="Italic" 
-        filename="../instance_ufo/UbuntuSans-Italic.ufo" 
-        stylemapfamilyname="Ubuntu Sans" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Italic"
+        familyname="Ubuntu Sans"
+        stylename="Italic"
+        filename="../instance_ufo/UbuntuSans-Italic.ufo"
+        stylemapfamilyname="Ubuntu Sans"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="400"/>
@@ -125,16 +123,15 @@
       <kerning/>
       <info/>
     </instance>
-    
+
     <!--
-    <instance 
-        name="Ubuntu Sans Original Weight Italic" 
-        familyname="Ubuntu Sans Original Weight" 
-        stylename="Italic" 
-        filename="../instance_ufo/UbuntuOriginalWeight-Italic.ufo" 
-        stylemapfamilyname="UbuntuOriginalWeight" 
-        stylemapstylename="italic"
-    >
+    <instance
+        name="Ubuntu Sans Original Weight Italic"
+        familyname="Ubuntu Sans Original Weight"
+        stylename="Italic"
+        filename="../instance_ufo/UbuntuOriginalWeight-Italic.ufo"
+        stylemapfamilyname="UbuntuOriginalWeight"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="473"/>
@@ -143,15 +140,14 @@
       <info/>
     </instance>
     -->
-    
-    <instance 
-        name="Ubuntu Sans Medium Italic" 
-        familyname="Ubuntu Sans" 
-        stylename="Medium Italic" 
-        filename="../instance_ufo/UbuntuSans-MediumItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Medium" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Medium Italic"
+        familyname="Ubuntu Sans"
+        stylename="Medium Italic"
+        filename="../instance_ufo/UbuntuSans-MediumItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Medium"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="530"/>
@@ -159,31 +155,29 @@
       <kerning/>
       <info/>
     </instance>
-    
-    <instance 
-        name="Ubuntu Sans SemiBold Italic" 
-        familyname="Ubuntu Sans" 
-        stylename="SemiBold Italic" 
-        filename="../instance_ufo/UbuntuSans-SemiBoldItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans SemiBold" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans SemiBold Italic"
+        familyname="Ubuntu Sans"
+        stylename="SemiBold Italic"
+        filename="../instance_ufo/UbuntuSans-SemiBoldItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans SemiBold"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="615"/>
       </location>
       <kerning/>
       <info/>
-    </instance> 
-    
-    <instance 
-        name="Ubuntu Sans Bold Italic" 
-        familyname="Ubuntu Sans" 
-        stylename="Bold Italic" 
-        filename="../instance_ufo/UbuntuSans-BoldItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans" 
-        stylemapstylename="bold italic"
-    >
+    </instance>
+
+    <instance
+        name="Ubuntu Sans Bold Italic"
+        familyname="Ubuntu Sans"
+        stylename="Bold Italic"
+        filename="../instance_ufo/UbuntuSans-BoldItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans"
+        stylemapstylename="bold italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="700"/>
@@ -191,16 +185,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    
-    <instance 
-        name="Ubuntu Sans ExtraBold Italic" 
-        familyname="Ubuntu Sans" 
-        stylename="ExtraBold Italic" 
-        filename="../instance_ufo/UbuntuSans-ExtraBoldItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans ExtraBold" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans ExtraBold Italic"
+        familyname="Ubuntu Sans"
+        stylename="ExtraBold Italic"
+        filename="../instance_ufo/UbuntuSans-ExtraBoldItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans ExtraBold"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="100"/>
         <dimension name="Weight" xvalue="800"/>
@@ -208,18 +200,15 @@
       <kerning/>
       <info/>
     </instance>
-    
+
     <!-- condensed width -->
-    
-    
-    <instance 
-        name="Ubuntu Sans Condensed Thin Italic" 
-        familyname="Ubuntu Sans Condensed" 
-        stylename="Condensed Thin Italic" 
-        filename="../instance_ufo/UbuntuSansCondensed-ThinItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Condensed Thin" 
-        stylemapstylename="italic"
-    >
+    <instance
+        name="Ubuntu Sans Condensed Thin Italic"
+        familyname="Ubuntu Sans Condensed"
+        stylename="Condensed Thin Italic"
+        filename="../instance_ufo/UbuntuSansCondensed-ThinItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Condensed Thin"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="100"/>
@@ -227,15 +216,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    <instance 
-        name="Ubuntu Sans Condensed ExtraLight Italic" 
-        familyname="Ubuntu Sans Condensed" 
-        stylename="Condensed ExtraLight Italic" 
-        filename="../instance_ufo/UbuntuSansCondensed-ExtraLightItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Condensed ExtraLight" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Condensed ExtraLight Italic"
+        familyname="Ubuntu Sans Condensed"
+        stylename="Condensed ExtraLight Italic"
+        filename="../instance_ufo/UbuntuSansCondensed-ExtraLightItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Condensed ExtraLight"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="200"/>
@@ -243,16 +231,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    
-    <instance 
-        name="Ubuntu Sans Condensed Light Italic" 
-        familyname="Ubuntu Sans Condensed" 
-        stylename="Condensed Light Italic" 
-        filename="../instance_ufo/UbuntuSansCondensed-LightItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Condensed Light" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Condensed Light Italic"
+        familyname="Ubuntu Sans Condensed"
+        stylename="Condensed Light Italic"
+        filename="../instance_ufo/UbuntuSansCondensed-LightItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Condensed Light"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="300"/>
@@ -260,16 +246,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    
-    <instance 
-        name="Ubuntu Sans Condensed Italic" 
-        familyname="Ubuntu Sans Condensed" 
-        stylename="Condensed Italic" 
-        filename="../instance_ufo/UbuntuSansCondensed-Italic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Condensed" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Condensed Italic"
+        familyname="Ubuntu Sans Condensed"
+        stylename="Condensed Italic"
+        filename="../instance_ufo/UbuntuSansCondensed-Italic.ufo"
+        stylemapfamilyname="Ubuntu Sans Condensed"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="400"/>
@@ -277,14 +261,14 @@
       <kerning/>
       <info/>
     </instance>
-    <instance 
-        name="Ubuntu Sans Condensed Medium Italic" 
-        familyname="Ubuntu Sans Condensed" 
-        stylename="Condensed Medium Italic" 
-        filename="../instance_ufo/UbuntuSansCondensed-MediumItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Condensed Medium" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Condensed Medium Italic"
+        familyname="Ubuntu Sans Condensed"
+        stylename="Condensed Medium Italic"
+        filename="../instance_ufo/UbuntuSansCondensed-MediumItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Condensed Medium"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="530"/>
@@ -292,15 +276,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    <instance 
-        name="Ubuntu Sans Condensed SemiBold Italic" 
-        familyname="Ubuntu Sans Condensed" 
-        stylename="Condensed SemiBold Italic" 
-        filename="../instance_ufo/UbuntuSansCondensed-SemiBoldItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Condensed SemiBold" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Condensed SemiBold Italic"
+        familyname="Ubuntu Sans Condensed"
+        stylename="Condensed SemiBold Italic"
+        filename="../instance_ufo/UbuntuSansCondensed-SemiBoldItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Condensed SemiBold"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="615"/>
@@ -308,15 +291,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    <instance 
-        name="Ubuntu Sans Condensed Bold Italic" 
-        familyname="Ubuntu Sans Condensed" 
-        stylename="Condensed Bold Italic" 
-        filename="../instance_ufo/UbuntuSansCondensed-BoldItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Condensed" 
-        stylemapstylename="bold italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Condensed Bold Italic"
+        familyname="Ubuntu Sans Condensed"
+        stylename="Condensed Bold Italic"
+        filename="../instance_ufo/UbuntuSansCondensed-BoldItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Condensed"
+        stylemapstylename="bold italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="700"/>
@@ -324,16 +306,14 @@
       <kerning/>
       <info/>
     </instance>
-    
-    
-    <instance 
-        name="Ubuntu Sans Condensed ExtraBold Italic" 
-        familyname="Ubuntu Sans Condensed" 
-        stylename="Condensed ExtraBold Italic" 
-        filename="../instance_ufo/UbuntuSansCondensed-ExtraBoldItalic.ufo" 
-        stylemapfamilyname="Ubuntu Sans Condensed ExtraBold" 
-        stylemapstylename="italic"
-    >
+
+    <instance
+        name="Ubuntu Sans Condensed ExtraBold Italic"
+        familyname="Ubuntu Sans Condensed"
+        stylename="Condensed ExtraBold Italic"
+        filename="../instance_ufo/UbuntuSansCondensed-ExtraBoldItalic.ufo"
+        stylemapfamilyname="Ubuntu Sans Condensed ExtraBold"
+        stylemapstylename="italic">
       <location>
         <dimension name="Width" xvalue="75"/>
         <dimension name="Weight" xvalue="800"/>
@@ -341,8 +321,8 @@
       <kerning/>
       <info/>
     </instance>
-    
   </instances>
+
   <lib>
     <dict>
       <key>UFOFormat</key>
