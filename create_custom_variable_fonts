@@ -1,0 +1,54 @@
+#!/bin/bash
+
+set -x
+
+rename_ff () {
+    font_name=$1
+    maybe_font_style=$2
+    should_remove_light_weights=${3:-false}
+    source_file=UbuntuSans${maybe_font_style}'[wdth,wght].ttf'
+    target_file=${font_name}Sans${maybe_font_style}'[wdth,wght]'
+    target_file_ttf=$target_file.ttf
+    target_file_ttx=$target_file.ttx
+
+    if [ "$should_remove_light_weights" = true ]; then
+        cp $source_file $target_file_ttf.tmp &&
+        fonttools varLib.instancer -o $target_file_ttf $target_file_ttf.tmp wght=500:800 &&
+        rm $target_file_ttf.tmp
+    else
+        cp $source_file $target_file_ttf
+    fi &&
+    ttx $target_file_ttf &&
+    rm $target_file_ttf &&
+    perl -0777 -pi -e "s/Ubuntu/${font_name}/g" $target_file_ttx &&
+    ttx $target_file_ttx &&
+    rm $target_file_ttx &&
+    mv $target_file_ttf ../../fonts2/
+}
+
+make_dev () {
+    font_name=$1
+    should_remove_light_weights=${2:-false}
+    make dev &&
+    cd fonts/variable &&
+    rename_ff "$font_name" ""        "$should_remove_light_weights" &&
+    rename_ff "$font_name" "-Italic" "$should_remove_light_weights" &&
+    cd -
+}
+
+pyenv local 3.8.20 &&
+rm -rf fonts2 2>/dev/null
+mkdir fonts2 &&
+echo Creating Bubuntu Sans variable fonts... &&
+make_dev Bubuntu &&
+echo Creating Cubuntu Sans variable fonts... &&
+for file in sources/*.designspace; do
+    perl -0777 -pi -e 's/530/510/g' "$file"
+done &&
+make_dev Cubuntu &&
+echo Creating Dubuntu Sans variable fonts... &&
+make_dev Dubuntu true &&
+git checkout ./sources/
+git checkout ./fonts/
+rm fonts/variable/*Beta*.ttf 2>/dev/null
+rm .python-version
