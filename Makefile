@@ -17,7 +17,7 @@ help:
 build: build.stamp
 
 dev: venv .init.stamp sources/config-dev.yaml $(SOURCES)
-	. venv/bin/activate; rm -rf fonts/; gftools builder sources/config-dev.yaml; scripts/fixGDEF.py; python3 scripts/addVersionToNames.py ./fonts/variable;
+	. venv/bin/activate; rm -rf fonts/; gftools builder sources/config-dev.yaml; python3 scripts/fixGDEF.py; python3 scripts/addVersionToNames.py ./fonts/variable;
 
 venv: venv/touchfile
 
