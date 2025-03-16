@@ -2,18 +2,18 @@
 
 set -x
 
-rename_ff () {
+rename_and_reweight_font () {
     font_name=$1
     maybe_font_style=$2
-    should_remove_light_weights=${3:-false}
+    custom_wght=$3
     source_file=UbuntuSans${maybe_font_style}'[wdth,wght].ttf'
     target_file=${font_name}Sans${maybe_font_style}'[wdth,wght]'
     target_file_ttf=$target_file.ttf
     target_file_ttx=$target_file.ttx
 
-    if [ "$should_remove_light_weights" = true ]; then
+    if [ -n "$custom_wght" ]; then
         cp $source_file $target_file_ttf.tmp &&
-        fonttools varLib.instancer -o $target_file_ttf $target_file_ttf.tmp wght=500:800 &&
+        fonttools varLib.instancer -o $target_file_ttf $target_file_ttf.tmp wght=$custom_wght &&
         rm $target_file_ttf.tmp
     else
         cp $source_file $target_file_ttf
@@ -26,29 +26,31 @@ rename_ff () {
     mv $target_file_ttf ../../fonts2/
 }
 
-make_dev () {
+create_mutant () {
     font_name=$1
-    should_remove_light_weights=${2:-false}
-    make dev &&
+    custom_wght=$2
+    skip_italic=${3:-false}
     cd fonts/variable &&
-    rename_ff "$font_name" ""        "$should_remove_light_weights" &&
-    rename_ff "$font_name" "-Italic" "$should_remove_light_weights" &&
+    rename_and_reweight_font "$font_name" "" "$custom_wght" &&
+    if [ "$skip_italic" = false ]; then
+        rename_and_reweight_font "$font_name" "-Italic" "$custom_wght"
+    fi &&
     cd -
 }
 
-pyenv local 3.8.20 &&
 rm -rf fonts2 2>/dev/null
+pyenv local 3.8.20 &&
 mkdir fonts2 &&
-echo Creating Bubuntu Sans variable fonts... &&
-make_dev Bubuntu &&
-echo Creating Cubuntu Sans variable fonts... &&
-for file in sources/*.designspace; do
-    perl -0777 -pi -e 's/530/510/g' "$file"
-done &&
-make_dev Cubuntu &&
-echo Creating Dubuntu Sans variable fonts... &&
-make_dev Dubuntu true &&
-git checkout ./sources/
+echo "Creating Ubuntu Sans variable fonts..." &&
+make dev &&
+echo "Creating Bubuntu Sans (only a rename) variable fonts... (for LibreOffice Writer 7.3.7.2 with GDI font rendering)" &&
+create_mutant Bubuntu &&
+echo "Creating Cubuntu Sans variable fonts... (with weight 473, for MacType global [FontSubstitutes] section)" &&
+create_mutant Cubuntu "100:473:800" &&
+echo "Creating Dubuntu Sans variable fonts... (for Chromium Browsers)" &&
+create_mutant Dubuntu "500:800" &&
+echo "Creating Fubuntu Sans variable font... (for Android)" &&
+create_mutant Fubuntu "100:550:800" true &&
 git checkout ./fonts/
 rm fonts/variable/*Beta*.ttf 2>/dev/null
 rm .python-version
