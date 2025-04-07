@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -x
+
+rename_font () {
+    font_name=$1
+    source_file=$2
+    target_file_ttf=${source_file/Ubuntu/$font_name}
+    target_file_ttx=${target_file_ttf/.ttf/.ttx}
+
+    cp "$source_file" "$target_file_ttf" &&
+    ttx "$target_file_ttf" &&
+    rm "$target_file_ttf" &&
+    perl -0777 -pi -e "s/Ubuntu/${font_name}/g" "$target_file_ttx" &&
+    ttx "$target_file_ttx" &&
+    rm "$target_file_ttx" &&
+    mv "$target_file_ttf" ../../fonts2/
+}
+
+create_mutant () {
+    font_name=$1
+
+    cd fonts/ttf &&
+    for file in *.ttf; do
+        rename_font "$font_name" "$file";
+    done &&
+    cd -
+}
+
+rm -rf fonts2 2>/dev/null
+pyenv local 3.8.20 &&
+mkdir fonts2 &&
+echo "Creating Bubuntu Sans (only a rename) fonts... (for LibreOffice Writer 7.3.7.2 with GDI font rendering)" &&
+create_mutant Bubuntu &&
+rm .python-version
